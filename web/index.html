@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"src="/eel.js"></script>
+</head>
+<body>
+    <div class="kalkulator">
+        <input type="text" id="display" disabled placeholder="0">
+
+        <div class="tombol-grid">
+            <button class="hapus" onclick="hapusLayar()">C</button>
+            <button class="operator" onclick="klikOperator('^')">x²</button>
+            <button class="operator" onclick="klikOperator('akar')">√</button>
+            <button class="operator" onclick="klikOperator('/')">/</button>
+
+            <button onclick="klikAngka('7')">7</button>
+            <button onclick="klikAngka('8')">8</button>
+            <button onclick="klikAngka('9')">9</button>
+            <button class="operator" onclick="klikOperator('*')">x</button>
+
+            <button onclick="klikAngka('4')">4</button>
+            <button onclick="klikAngka('5')">5</button>
+            <button onclick="klikAngka('6')">6</button>
+            <button class="operator" onclick="klikOperator('-')">-</button>
+
+            <button onclick="klikAngka('1')">1</button>
+            <button onclick="klikAngka('2')">2</button>
+            <button onclick="klikAngka('3')">3</button>
+            <button class="operator" onclick="klikOperator('+')">+</button>
+
+            <button onclick="klikAngka('0')" style="grid-column: span 2;">0</button>
+            <button onclick="klikAngka('.')">.</button>
+            <button class="samadengan" onclick="hitungHasil()">=</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
