@@ -7,14 +7,12 @@ import history_logger
 eel.init('web')
 
 @eel.expose
-# Urutan disamakan dengan JS: angka1, angka2, operator
 def proses_hitung(angka1, angka2, operator): 
     try:
         angka1 = float(angka1)
         angka2 = float(angka2)
         hasil = 0
 
-        # NAMA FUNGSI DISESUAIKAN DENGAN FILE TEMAN-TEMANMU
         if operator == '+':
             hasil = basic_math.penjumlahan(angka1, angka2)
         elif operator == '-':
@@ -26,9 +24,8 @@ def proses_hitung(angka1, angka2, operator):
         elif operator == '^':
             hasil = power_root.hitung_pangkat(angka1, angka2)
         elif operator == 'akar':
-            hasil = power_root.hitung_akar(angka1) # Akar hanya butuh angka1
-            
-        # Simpan ke riwayat 
+            hasil = power_root.hitung_akar(angka1) 
+             
         teks = f"{angka1} {operator} {angka2} = {hasil}"
         history_logger.simpan(teks)
 
